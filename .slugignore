@@ -1,0 +1,8 @@
+*.psd
+*.pdf
+/test
+/spec
+/src/test
+*.md
+*.bat
+sbt-launch.jar
