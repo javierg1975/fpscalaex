@@ -6,7 +6,7 @@ Plus whatever other interesting examples or problems I might encounter
 
 More stringent compilation options for `scalac`. Adds [WartRemover](https://github.com/puffnfresh/wartremover) and [Scalastyle](http://www.scalastyle.org/) plugins to *sbt*
 
-###What it provides
+###Goodies included in the sbt config
 - Static code analysis.
 - Automatic code reviews based on best practices.
 - Automatic enforcement of standard coding style.
@@ -24,5 +24,5 @@ More stringent compilation options for `scalac`. Adds [WartRemover](https://gith
     - Scalastyle allows the use of [rule suppression comments](http://stackoverflow.com/questions/21931431/how-can-i-suppress-scalastyle-warning). Learn how and when to use them
     - **DO NOT** follow advice blindly. Always try to understand the reasons behind a rule. Following advice blindly leads to fear. Fear leads to anger. Anger leads to hate. Hate leads to suffering (you get the point.)
 
-##If you want to know more
+###If you want to know more about the sbt project structure
 Check out [Leif Wickland's presentation](http://confreaks.com/videos/4863-PNWS2014-towards-a-safer-scala) at PNWScala
