@@ -4,16 +4,16 @@ name := "FP in Scala exercises"
 
 scalaVersion := "2.12.0-M3"
 
-wartremoverErrors ++= Seq(
+/*wartremoverErrors ++= Seq(
   Wart.Any2StringAdd,
   Wart.EitherProjectionPartial,
   Wart.OptionPartial,
   Wart.Product,
   Wart.Serializable,
   Wart.ListOps
-)
+)*/
 
-wartremoverWarnings ++= Seq(Wart.Any, Wart.Nothing)
+//wartremoverWarnings ++= Seq(Wart.Any, Wart.Nothing)
 
 scalacOptions ++= Seq(
   "-deprecation",
@@ -31,18 +31,6 @@ scalacOptions ++= Seq(
 )
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
-
-// To force scalaVersion, add the following:
-ivyScala := ivyScala.value map {
-  _.copy(overrideScalaVersion = true)
-}
-
-libraryDependencies ++= {
-  "ch.qos.logback" % "logback-classic" % "1.1.3",
-  "com.logentries" % "logentries-appender" % "1.1.32",
-  "hirondelle.date4j" % "date4j" % "1.0" from "http://www.date4j.net/date4j.jar"
-
-}
 
 resolvers ++= Seq("Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/",
   "Maven Central" at "http://repo1.maven.org/maven2"
@@ -74,11 +62,11 @@ artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
 }
 
 // Run 'scalastyle' at compile
-lazy val compileScalastyle = taskKey[Unit]("compileScalastyle")
+//lazy val compileScalastyle = taskKey[Unit]("compileScalastyle")
 
-compileScalastyle := org.scalastyle.sbt.ScalastylePlugin.scalastyle.in(Compile).toTask("").value
+//compileScalastyle := org.scalastyle.sbt.ScalastylePlugin.scalastyle.in(Compile).toTask("").value
 
-(compile in Compile) <<= (compile in Compile) dependsOn compileScalastyle
+(compile in Compile) <<= (compile in Compile) //dependsOn compileScalastyle
 
 // Make 'run' task to depend on 'test' task.
 run in Compile <<= (run in Compile).dependsOn(test in Test)
